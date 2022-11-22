@@ -215,6 +215,9 @@ void Systems::calcNeighborLists()
 			//fprintf(fh_debug,"n: %d\n",n);
 			
 			// Apply periodic operations for 26 periodic boxes
+			
+			// by hjchen: 如果cutoff<cell_size，那么就意味着，我们同样需要在3维空间搜索27个格子中的近邻原子
+			// https://www.cnblogs.com/dechinphy/p/jaxnb1.html
 
 			// 1
 			if (xn+lx < lx+rc2){
